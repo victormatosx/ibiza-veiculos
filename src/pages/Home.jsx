@@ -28,8 +28,7 @@ const Home = () => {
       km: "23.000",
       fuel: "Diesel",
       year: "2023",
-      image:
-        hilux,
+      image: hilux,
       featured: true,
     },
     {
@@ -39,8 +38,7 @@ const Home = () => {
       km: "47.880",
       fuel: "Diesel",
       year: "2020",
-      image:
-        ram,
+      image: ram,
       featured: true,
     },
     {
@@ -50,19 +48,17 @@ const Home = () => {
       km: "4.700",
       fuel: "Gasolina",
       year: "2023",
-      image:
-        zrv,
+      image: zrv,
       featured: true,
     },
-        {
+    {
       id: 4,
       name: "BMW 320IA 2.0 TB M SPORT A.FLEX/M.SPORT 4P",
       price: 320900,
       km: "17.200",
       fuel: "Flex",
       year: "2024",
-      image:
-        bmw,
+      image: bmw,
       featured: true,
     },
     {
@@ -72,8 +68,7 @@ const Home = () => {
       km: "24.000",
       fuel: "Gasolina",
       year: "2021",
-      image:
-        bronco,
+      image: bronco,
       featured: true,
     },
     {
@@ -83,11 +78,9 @@ const Home = () => {
       km: "0",
       fuel: "Diesel",
       year: "2025",
-      image:
-        sw4,
+      image: sw4,
       featured: true,
     },
-
   ]
 
   return (
@@ -146,37 +139,38 @@ const Home = () => {
             </p>
           </div>
 
-          {/* Filtro de busca */}
+          {/* Filtro de busca minimalista */}
           <div
             className="card"
             style={{
-              maxWidth: "800px",
+              maxWidth: "700px",
               margin: "0 auto",
-              padding: "2rem",
+              padding: "1.5rem",
               backgroundColor: "rgba(255, 255, 255, 0.95)",
               backdropFilter: "blur(10px)",
+              borderRadius: "0.75rem",
             }}
           >
-            <h3
+            <div
               style={{
-                fontSize: "1.125rem",
-                fontWeight: "600",
-                marginBottom: "1.5rem",
-                color: "var(--gray-800)",
-                display: "flex",
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr 1fr auto",
+                gap: "1rem",
                 alignItems: "center",
-                gap: "0.5rem",
               }}
             >
-              <Search className="icon" />
-              Encontre seu veículo ideal
-            </h3>
-
-            <div className="grid grid-4" style={{ gap: "1rem", marginBottom: "1.5rem" }}>
               <select
                 className="form-input"
                 value={searchFilters.marca}
                 onChange={(e) => setSearchFilters({ ...searchFilters, marca: e.target.value })}
+                style={{
+                  height: "44px",
+                  padding: "0 0.75rem",
+                  borderRadius: "0.5rem",
+                  border: "1px solid #d1d5db",
+                  fontSize: "0.875rem",
+                  backgroundColor: "white",
+                }}
               >
                 <option value="">Marca</option>
                 <option value="honda">Honda</option>
@@ -190,6 +184,14 @@ const Home = () => {
                 className="form-input"
                 value={searchFilters.modelo}
                 onChange={(e) => setSearchFilters({ ...searchFilters, modelo: e.target.value })}
+                style={{
+                  height: "44px",
+                  padding: "0 0.75rem",
+                  borderRadius: "0.5rem",
+                  border: "1px solid #d1d5db",
+                  fontSize: "0.875rem",
+                  backgroundColor: "white",
+                }}
               >
                 <option value="">Modelo</option>
                 <option value="civic">Civic</option>
@@ -202,6 +204,14 @@ const Home = () => {
                 className="form-input"
                 value={searchFilters.ano}
                 onChange={(e) => setSearchFilters({ ...searchFilters, ano: e.target.value })}
+                style={{
+                  height: "44px",
+                  padding: "0 0.75rem",
+                  borderRadius: "0.5rem",
+                  border: "1px solid #d1d5db",
+                  fontSize: "0.875rem",
+                  backgroundColor: "white",
+                }}
               >
                 <option value="">Ano</option>
                 <option value="2023">2023</option>
@@ -210,8 +220,24 @@ const Home = () => {
                 <option value="2020">2020</option>
               </select>
 
-              <button className="btn" style={{ backgroundColor: "#003C85", color: "white" }}>
-                <Search className="icon" />
+              <button
+                className="btn"
+                style={{
+                  backgroundColor: "#003C85",
+                  color: "white",
+                  height: "44px",
+                  padding: "0 1.5rem",
+                  borderRadius: "0.5rem",
+                  border: "none",
+                  fontSize: "0.875rem",
+                  fontWeight: "500",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                  cursor: "pointer",
+                }}
+              >
+                <Search style={{ width: "16px", height: "16px" }} />
                 Buscar
               </button>
             </div>
@@ -347,7 +373,16 @@ const Home = () => {
               </h3>
 
               <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
-                <div className="card" style={{ padding: "1.5rem", display: "flex", alignItems: "center", gap: "1rem", boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)" }}>
+                <div
+                  className="card"
+                  style={{
+                    padding: "1.5rem",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "1rem",
+                    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                  }}
+                >
                   <div
                     style={{
                       width: "48px",
@@ -368,7 +403,16 @@ const Home = () => {
                   </div>
                 </div>
 
-                <div className="card" style={{ padding: "1.5rem", display: "flex", alignItems: "center", gap: "1rem", boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)" }}>
+                <div
+                  className="card"
+                  style={{
+                    padding: "1.5rem",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "1rem",
+                    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                  }}
+                >
                   <div
                     style={{
                       width: "48px",
@@ -389,7 +433,16 @@ const Home = () => {
                   </div>
                 </div>
 
-                <div className="card" style={{ padding: "1.5rem", display: "flex", alignItems: "center", gap: "1rem", boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)" }}>
+                <div
+                  className="card"
+                  style={{
+                    padding: "1.5rem",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "1rem",
+                    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                  }}
+                >
                   <div
                     style={{
                       width: "48px",
@@ -414,7 +467,16 @@ const Home = () => {
                   </div>
                 </div>
 
-                <div className="card" style={{ padding: "1.5rem", display: "flex", alignItems: "center", gap: "1rem", boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)" }}>
+                <div
+                  className="card"
+                  style={{
+                    padding: "1.5rem",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "1rem",
+                    boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+                  }}
+                >
                   <div
                     style={{
                       width: "48px",
@@ -463,7 +525,6 @@ const Home = () => {
                 ></iframe>
               </div>
             </div>
-
           </div>
         </div>
       </section>
