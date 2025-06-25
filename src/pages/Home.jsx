@@ -7,6 +7,10 @@ import heroIbiza from "../assets/hero.png"
 import hilux from "../assets/hilux.jpg"
 import ram from "../assets/ram.jpg"
 import zrv from "../assets/zrv.jpg"
+import bmw from "../assets/bmw.jpg"
+import bronco from "../assets/bronco.jpg"
+import sw4 from "../assets/sw4.jpg"
+
 import videoFile from "../assets/video-ibiza.mp4"
 
 const Home = () => {
@@ -48,6 +52,39 @@ const Home = () => {
       year: "2023",
       image:
         zrv,
+      featured: true,
+    },
+        {
+      id: 4,
+      name: "BMW 320IA 2.0 TB M SPORT A.FLEX/M.SPORT 4P",
+      price: 320900,
+      km: "17.200",
+      fuel: "Flex",
+      year: "2024",
+      image:
+        bmw,
+      featured: true,
+    },
+    {
+      id: 5,
+      name: "FORD BRONCO SPORT WILDTRAK 2.0 TB 16V AWD AUT",
+      price: 168000,
+      km: "24.000",
+      fuel: "Gasolina",
+      year: "2021",
+      image:
+        bronco,
+      featured: true,
+    },
+    {
+      id: 6,
+      name: "TOYOTA HILUX SW4 SRX PLAT. 4X4 2.8 TB DIE. AUT",
+      price: 389900,
+      km: "0",
+      fuel: "Diesel",
+      year: "2025",
+      image:
+        sw4,
       featured: true,
     },
 
